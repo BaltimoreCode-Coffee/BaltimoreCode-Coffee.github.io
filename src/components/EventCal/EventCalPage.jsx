@@ -34,7 +34,7 @@ export default function EventCalPage() {
   return (
     <div className="event-cal-pg">
       <h1 className="event-cal-pg__title">
-        Code Coffee Events: Connect, Learn, and Innovate Together!
+        Connect, Learn, and Innovate Together!
       </h1>
       <div className="event-cal-pg__divider"></div>
       <main className="event-cal-pg__main">

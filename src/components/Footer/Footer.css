@@ -57,13 +57,16 @@ color: purple
     color: white;
     font-size: 20px;
     margin-top: 25px;
+ 
 }
 
 .email a:hover{
     color: purple;
     transition: 0.3s;
 }
-
+.email{
+  white-space: nowrap;
+}
 .social-list {
   display: flex;
   justify-content: center; /* Center the items horizontally */
@@ -160,9 +163,46 @@ li {
 .mini-footer {
   display: none;
 }
+footer .dropdown-menu{
+  top:0px;
+  color: rgb(188, 188, 188);
+  ul{
+      padding: 10px 0;
+      display: initial;  
+      li{
+         font-size: 14px;
+         margin:0;
+      }
+  }
+}  
 
 
-@media (max-width: 480px) {
+
+
+/* Tablet styling */
+@media (max-width: 1034px) {
+  /* Adjust the footer links container */
+  .footer-links {
+    padding-bottom: 40px;
+    width: 100%;
+  }
+  
+  /*Warp footler links in 3x3 max grid*/
+  .footer-links ul {
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr); /* Maximum of 3 items per row */
+
+    gap: 20px 10px; /* Row gap, column gap */
+
+  }
+  
+
+ 
+}
+
+ 
+/*Mobile styling */
+@media  (max-width: 840px) {
   .mini-footer {
     display: block;
   }

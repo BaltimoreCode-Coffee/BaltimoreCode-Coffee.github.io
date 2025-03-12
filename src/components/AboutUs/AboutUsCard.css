@@ -27,6 +27,7 @@
   
   .about-us__text-header h1 {
     font-size: 1.8rem;
+    white-space: nowrap;
 
         font-weight: 600;
     color: #222;
@@ -40,7 +41,8 @@
     font-style: normal;
     font-weight: 400;
     font-family: var(--secondary-font);
-   
+    margin-bottom: 20px;
+  
   }
   
   /* Button Styling */
@@ -99,7 +101,7 @@
   }
   
   /* Responsive Design */
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 820px) {
     .about-us__container {
         flex-direction: column;
         align-items: center;
@@ -123,7 +125,7 @@
     }
   
     .about-us__text-content p {
-      font-size: 18px;
+      font-size: 20px;
       font-style: normal;
       font-weight: 400;
       margin-top: 20px;
@@ -175,3 +177,49 @@
         width: 90%;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    .about-us__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+      gap: 10px;
+      padding: 10px;
+      background-color: white;
+      border-radius: 5px;
+      
+      width: 85vw;
+      box-sizing: border-box;
+      
+      /* centering  */
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+
+    /* Removing the defined width allows the component to be better centered on the screen */
+      box-sizing: border-box;
+  
+    }
+
+    .about-us__text, .about-us__img {
+      flex: 1 1 50%;
+      min-width: 200px;
+      padding: 5px;
+    }
+    
+    .about-us__text-header h1 {
+      font-size:26px;
+      text-wrap: wrap;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .about-us__text-content p {
+      font-size: 18px
+    }
+  }
+
+
+
+ 

@@ -6,6 +6,8 @@
 
 .event-cal-pg__title {
   margin-bottom: 47px;
+  font-size: var(--heading-desktop);
+  padding-left: 5%;
 }
 
 .event-cal-pg__divider {
@@ -125,7 +127,7 @@
 
 @media (max-width: 1060px) {
   .event-cal-pg__title {
-    font-size: 34px;
+    font-size: 60px;
   }
 
   .event-cal-pg__tabs,

@@ -5,7 +5,7 @@ import HomeView from "./components/HomeView/HomeView";
 import Navbar from "./components/Navbar/Navbar";
 import EventTypes from "./components/EventTypes/EventTypes";
 import EventCalPage from "./components/EventCal/EventCalPage";
-import AboutUs from "./components/AboutUs/AboutUs";
+import AboutUsPage from "./components/AboutUsPage/AboutPage";
 import Blog from "./components/Blog/Blog";
 import BlogArticle from "./components/BlogArticle/BlogArticle";
 import Footer from "./components/Footer/Footer";
@@ -25,7 +25,7 @@ function App() {
           <Route path="/event-types" element={<EventTypes />} />
           <Route path="/event-types/:tag?" element={<EventTypes />} />
           <Route path="/event-calendar" element={<EventCalPage />} />
-          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogArticle />} />
           <Route path="/volunteer" element={<Volunteer />} />
@@ -35,6 +35,7 @@ function App() {
 
     </Router>
     </div>
+
   );
 }
 

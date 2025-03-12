@@ -4,10 +4,16 @@
 li.splide__slide:hover{
     background: linear-gradient( rgba(255, 255, 255, 0), rgba(78, 0, 110, .9));
     border: 1px solid var(--primary-white);
+
     .slide-buttons{
         visibility: visible;
+      
     }
 } 
+/* Sets text to white*/
+.carousel .slide-buttons a {
+    color: #fff;
+}
 .carousel img{
     height: 100%;
     width: 100%;
@@ -33,9 +39,10 @@ li.splide__slide:hover{
     top: -40px;
     justify-content: space-between;
     padding: 0 20px;
+    
 }
 .slide-buttons a{
-    color: var(--primary-white);
+    color: #fff;
     background-color: rgba(255,255,255,0.3);
     font-family: var(--tertiary-font);
     text-decoration: none;
@@ -47,11 +54,15 @@ li.splide__slide:hover{
     background-color: rgba(255,255,255,0.5);;
 }
 .view-events-btn a{
-    border-radius: 20px;
+    border-radius: 15px;
+    color: #fff;
 }
 .about-btn a{
-    border-radius: 3px;;
+    border-radius: 15px;;
+    color: #fff;
 }
+
+
 .splide:not(.is-overflow) .splide__pagination,
 .splide__pagination{
     display: flex;

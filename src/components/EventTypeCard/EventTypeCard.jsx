@@ -39,7 +39,7 @@ const EventTypeCard = ({eventType}) => {
 
                 <div className="EventTypeCard__btn-container">
                     <button className="EventTypeCard__btn">
-                        <Link to = {eventType.link}>{eventType.btnTxt}</Link>
+                        <Link to = {eventType.link} target = '_blank'>{eventType.btnTxt}</Link>
                     </button>
                 </div>
                 

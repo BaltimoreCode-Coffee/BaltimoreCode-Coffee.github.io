@@ -13,14 +13,14 @@ const AboutUsCard = () => {
                 <h1>Welcome to Code & Coffee</h1>
             </div>
             <div className="about-us__text-content">
-                <p>Code & Coffee is a place where people with passion for tech can come together, exchange ideas, & learn from one another. It’s a place that encourages cross-pollination between
-                    technologists of varied backgrounds leaving them with new ideas & doubled energy to be poured back into the community
+                <p >Code & Coffee is a place where people with a passion for tech can come together, exchange ideas, & learn from one another. We facilitate connection between
+                    technologists of varied backgrounds, leaving them energized with new ideas.
              </p>
             </div>
             <div className="about-us__text-btn">
                 <button className = "about-us__btn">
                     <div className="about-us__btn-txt"><Link to={route_names.about_us}  style={{ textDecoration: 'none' ,color: 'inherit'}}>Learn More</Link></div>
-                    <div className="about-us__btn-icon"><ArrowRightAltIcon /></div>
+                
                 </button>
             </div>
         </div>

@@ -24,7 +24,7 @@ function Carousel() {
                                     <SplideSlide key={i}>
                                         <img src={slide.image} alt={slide.title} />
                                         <div className="slide-buttons">
-                                            <div className="about-btn"><Link to={`${route_names.event_type}/${slide.tag}`}>About</Link></div>
+                                            <div className="about-btn"><Link to={`${route_names.event_type}/${slide.tag}`}>Info</Link></div>
                                             <div className="view-events-btn"><Link to={route_names.event_cal}>View Events</Link></div>
                                         </div>
                                         <div className="slide-label">{slide.title}</div>

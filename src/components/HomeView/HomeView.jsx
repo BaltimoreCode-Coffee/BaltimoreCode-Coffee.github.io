@@ -1,4 +1,4 @@
-import Sponsors from '../sponsors/Sponsors'
+import Sponsors from '../Sponsors/Sponsors'
 import Carousel from '../Carousel/Carousel';
 import BlogView from "../BlogView/BlogView";  
 import './HomeView.css'
@@ -16,8 +16,10 @@ function HomeView() {
                 className="background-img" 
             />
             <section className="intro-section">
+
                 <h1>Baltimore's Best Tech Meetup</h1>
                 <p>An inclusive, informal, co-working meetup for people of all skill levels. Bring a laptop and ideas, we'll bring coffee!</p>
+
             </section>
             <section className="carousel-section">
                 <Carousel />

@@ -1,5 +1,6 @@
-.mobile-sponsor-card{
+.mobile-sponsor-link .mobile-sponsor-card{
     padding: 64px 31px;
+    
     h3{
         font-size: 20px;
         font-weight: 600;
@@ -14,4 +15,21 @@
 .mobile-sponsor-card__logo{
     height:52px;
     margin-bottom: 32px;
+}
+.mobile-sponsor-card h3, .mobile-sponsor-card p{
+    color: white;
+
+}
+
+.mobile-sponsor-card__type {
+    padding: 7px 18px;
+    /* background-color: var(--secondary-purple); */
+    background-color: rgba(126, 116, 217, 0.16);
+    border-radius: 5px;
+    width: 18%;
+    text-align: center;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 15px;
+    
 }

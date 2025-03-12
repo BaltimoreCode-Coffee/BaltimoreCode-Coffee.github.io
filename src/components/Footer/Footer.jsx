@@ -1,6 +1,6 @@
 import "./Footer.css";
-import { Link, useNavigate } from "react-router-dom";
-import DropdownMenu from "../DropdownMenu/DropdownMenu";
+import { Link  } from "react-router-dom";
+import EventsDropdownMenu from "../EventsDropdownMenu/EventsDropdownMenu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMeetup,
@@ -9,21 +9,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import logo from "../../assets/whitetranslogo.png";
-import EventCalIcon from "../../assets/event_cal_icon.svg";
-import EventTypeIcon from "../../assets/event_type_icon.svg";
 import route_names from "../../data_obj/RouteNames";
 
 
 function Footer() {
-  const navigate = useNavigate();
-
- function navigateToEventTypesPage() {
-    navigate(route_names.event_type);
-  }
-
-  function navigateToEventCalPage() {
-    navigate(route_names.event_cal);
-  }
 
   return (
     
@@ -37,14 +26,17 @@ function Footer() {
           />
           </div>
         <div className="mini-footer-menu">
-          <ul>  
-            <li>
-              <Link to={route_names.events}>Events</Link>
+          <ul>
+          <li>
+              <Link to={route_names.event_cal}>Event Calendar</Link>
            </li>
-            <li>
+            
+           <li>
+              <Link to={route_names.event_type}>Event Types</Link>
+           </li>
+           <li>
               <Link to={route_names.about_us}>About Us</Link>
             </li>
-         
             <li>
               <Link to={route_names.volunteer}>Volunteer</Link>
             </li> 
@@ -68,6 +60,7 @@ function Footer() {
               <a
                 href="https://www.linkedin.com/company/baltimore-code-coffee/"
                 className="social-button"
+                target ='_blank'
               >
                 <FontAwesomeIcon className="social-icon" icon={faLinkedin} />
               </a>
@@ -76,6 +69,7 @@ function Footer() {
               <a
                 href="https://baltimoretech.slack.com/archives/CTDNSM6EP"
                 className="social-button"
+                target = '_blank'
               >
                 <FontAwesomeIcon className="social-icon" icon={faSlack} />
               </a>
@@ -84,6 +78,7 @@ function Footer() {
               <a
                 href="https://www.meetup.com/baltimore-code-and-coffee"
                 className="social-button"
+                target = '_blank'
               >
                 <FontAwesomeIcon className="social-icon" icon={faMeetup} />
               </a>
@@ -112,28 +107,11 @@ function Footer() {
         </div>
         <div className="footer-links">
           <ul>
-            
+          <li>
+              <EventsDropdownMenu />
+            </li>
             <li>
-              <DropdownMenu
-              className="footer-events"
-                buttonId="footerEventsButton"
-                menuId="footerEventsMenu"
-                buttonTitle="Event"
-                menuItems={[
-                  {
-                    name: "Type of Events",
-                    id: "footerEventType",
-                    handleClick: navigateToEventTypesPage,
-                    icon: EventTypeIcon,
-                  },
-                  {
-                    name: "Event Calendar",
-                    id: "footerEventCalendar",
-                    handleClick: navigateToEventCalPage,
-                    icon: EventCalIcon,
-                  },
-                ]}
-              />
+              <Link to={route_names.about_us}>About Us</Link>
             </li>
             <li>
               <Link to={route_names.about_us}>About Us</Link>
@@ -165,6 +143,7 @@ function Footer() {
             <a
               href="https://www.linkedin.com/company/baltimore-code-coffee/"
               className="social-button"
+              target = '_blank'
             >
               <FontAwesomeIcon className="social-icon" icon={faLinkedin} />
             </a>
@@ -173,6 +152,7 @@ function Footer() {
             <a
               href="https://baltimoretech.slack.com/archives/CTDNSM6EP"
               className="social-button"
+              target = '_blank'
             >
               <FontAwesomeIcon className="social-icon" icon={faSlack} />
             </a>
@@ -181,6 +161,7 @@ function Footer() {
             <a
               href="https://www.meetup.com/baltimore-code-and-coffee"
               className="social-button"
+              target = '_blank'
             >
               <FontAwesomeIcon className="social-icon" icon={faMeetup} />
             </a>

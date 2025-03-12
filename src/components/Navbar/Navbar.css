@@ -33,14 +33,6 @@
   color: #181818;
 }
 
-.navbar__link:hover {
-  color: purple;
-}
-
-.navbar__link:visited {
-  color: #181818;
-}
-
 #navEventsButton,
 #mobileNavEventsButton {
   color: #181818;
@@ -48,6 +40,7 @@
   
 }
 
+/* targets only the dropdown */
 .MuiButtonBase-root,
 #navEventsButton,
 .navbar__desktop-menu,
@@ -58,6 +51,25 @@
   font-size: 14px;
   color: #181818;
 }
+
+ .navbar__desktop-menu-item .navbar__link{
+  color: #181818;
+
+  font-size: 14px;
+}
+
+.navbar__desktop-menu .navbar__desktop-menu-item a{
+  color: #000;
+}
+
+
+nav .dropdown-menu{
+  top:0px;
+  color: #181818;
+  margin-top: 6px;
+
+}  
+
 
 #mobileEventTypeBtn,
 #mobileEventCalBtn {

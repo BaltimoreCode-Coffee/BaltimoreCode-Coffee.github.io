@@ -1,22 +1,20 @@
 .event-types__container {
     flex-direction: column;
-    margin-top: 50px;
-    padding: 0 52px;
     margin-bottom: 50px;
+    padding: 40px;
 }
 
-.event-types__header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.event-types__header h1{
+    
+    padding-left: 5%;
+    font-size: var(--heading-desktop);
 }
 
 
 
 /* Mobile Styling */
-@media (max-width: 768px) {
-    .event-types__header {
-        display: none;
+@media (max-width: 770px) {
+    .event-types__header h1{
+        font-size: var(--heading-mobile);
     }
 }

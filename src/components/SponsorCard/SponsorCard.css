@@ -5,20 +5,28 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     padding: 30px 28px;
     border: 1px solid #412157;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
     /* flex: 1;
     min-width: 200px; */
 }
+
+.sponsor-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateX(-.5px) translateY(-1px);
+  }
+  
 .sponsor-card h3{
     font-weight: 400;
 }
 .sponsor-card__logo{
     height: 50px;
 }
-#wix_card img{
-    width: 110px;
-    height: 50px;
-    object-fit: cover;
-}
+
 .sponsor-card__bottom{
     color: var(--primary-white);
 }
@@ -40,9 +48,41 @@
     font-weight: 400;
     line-height: 24px;
     margin-top: 12px;
+    margin-bottom: 15%;
 }
 
-.sponsor-card__link:hover{
-    color: purple;
-    transition: 0.3s;
+.sponsor-card__type {
+    color:white;
+    padding: 10px 20px;
+   background-color: rgba(126, 116, 217, 0.16);
+    border-radius: 5px;
+    width: 18%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 15px;
+    height: 5%;
+    font-size: 15px;
+}
+
+.sponsor-card__bottom {
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 1220px){
+    .sponsor-card{
+        background: rgba(184, 184, 184, 0.16);
+        backdrop-filter: blur( x );
+        -webkit-backdrop-filter: blur( 100px );
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+       
+        border: 1px solid #412157;
+        width: 300px;
+        height: 220px;
+
+       
+        /* flex: 1;
+        min-width: 200px; */
+    }
 }
