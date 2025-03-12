@@ -7,6 +7,7 @@ import EventTypes from "./components/EventTypes/EventTypes";
 import EventCalPage from "./components/EventCal/EventCalPage";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Blog from "./components/Blog/Blog";
+import BlogArticle from "./components/BlogArticle/BlogArticle";
 import Footer from "./components/Footer/Footer";
 import Volunteer from "./components/Volunteer/Volunteer";
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/event-calendar" element={<EventCalPage />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogArticle />} />
           <Route path="/volunteer" element={<Volunteer />} />
         </Routes>
       </div>
