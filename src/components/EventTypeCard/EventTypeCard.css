@@ -135,7 +135,7 @@ a:link, a:visited {
 @media (max-width: 768px) {
     .EventTypeCard {
         width: 100%;
-        height: 525px;
+        height: 350px;
         transition: none;
         background-size: 60%;
         background-position-x: 120%;
@@ -167,7 +167,7 @@ a:link, a:visited {
     }
 
     .EventTypeCard__title {
-        font-size: 30px;
+        font-size: 24px;
         transition: none;
         font-weight: bold;
     }
@@ -181,19 +181,21 @@ a:link, a:visited {
         position: relative;
         top: 0px;
         width: 90%;
-        height: 75%;
+        height: 80%;
         align-items: center;
         justify-content: center;
-        font-size: 16px;
+        font-size: 14px;
         padding: 0/ 10px;
         transition: none;
         white-space: normal;
-  
+        overflow: scroll;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
 
     .EventTypeCard__btn-container {
         position: absolute;
-        bottom: 15px;
+        bottom: 5px;
         left: 0;
         width: 100%;
         height: 10%;
