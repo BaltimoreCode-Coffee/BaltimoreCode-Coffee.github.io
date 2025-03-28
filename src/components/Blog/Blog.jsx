@@ -1,4 +1,8 @@
 import "./Blog.css";
+
+import FullBlogList from "../FullBlogList/FullBlogList";
+import Stack from "@mui/material/Stack";
+import Pagination from "@mui/material/Pagination";
 export default function Blog() {
   return (
     <section className="blog">
@@ -7,22 +11,17 @@ export default function Blog() {
         <p>A Fresh Brew of Tech Insights, Community Stories, and Coding Tips</p>
       </div>
       <div className="mini-blog-header">
-        <h1>Code & Coffee Review</h1>
-        
-
+        <h1>Code and Coffee Review</h1>
       </div>
-      <div className="bottom_border"></div>
-      <section className="bottom">
-         <div className="blog_section" >
-         <p>Articles Coming Soon !</p> 
-          
-          
-        </div>
-    </section>
-     
-    </section>
     
-   
-    
+        <FullBlogList />
+      <br />
+      <br />
+      <br />
+      
+      <Stack spacing={2}>
+        <Pagination count={10} color="secondary" />
+      </Stack>
+    </section>
   );
 }

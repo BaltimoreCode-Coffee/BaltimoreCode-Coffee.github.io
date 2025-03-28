@@ -13,11 +13,12 @@ import route_names from "../../data_obj/RouteNames";
 
 
 function Footer() {
-
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     
     <footer>
- 
       <section className="mini-footer">
         <div className="mini-footer-logo-container">
           <img
@@ -29,20 +30,20 @@ function Footer() {
         <div className="mini-footer-menu">
           <ul>
           <li>
-              <Link to={route_names.event_cal}>Event Calendar</Link>
+              <Link to={route_names.event_cal} onClick={scrollToTop}>Event Calendar</Link>
            </li>
             
            <li>
-              <Link to={route_names.event_type}>Event Types</Link>
+              <Link to={route_names.event_type} onClick={scrollToTop}>Event Types</Link>
            </li>
            <li>
-              <Link to={route_names.about_us}>About Us</Link>
+              <Link to={route_names.about_us} onClick={scrollToTop}>About Us</Link>
             </li>
             <li>
               <Link to={route_names.get_involved}>Get Involved</Link>
             </li> 
             <li>
-              <Link to={route_names.blog}>Blog</Link>
+              <Link to={route_names.blog} onClick={scrollToTop}>Blog</Link>
             </li>
             <li>
               <a

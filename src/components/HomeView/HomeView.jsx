@@ -1,5 +1,6 @@
 import Sponsors from '../Sponsors/Sponsors'
 import Carousel from '../Carousel/Carousel';
+import BlogView from "../BlogView/BlogView";  
 import './HomeView.css'
 import AboutUsCard from '../AboutUs/AboutUsCard';
 import backgroundImg from '../../assets/backgroundImg.svg'
@@ -26,10 +27,14 @@ function HomeView() {
             <section className="about-us">
                 <AboutUsCard />
             </section>
-            <section className="sponsor-section">
+            <section className="blog-section">
+        <BlogView />
+      </section>
+      <section className="sponsor-section">
                 <Sponsors />
             </section> 
-        </main>
+          
+    </main>
 
      );
 }

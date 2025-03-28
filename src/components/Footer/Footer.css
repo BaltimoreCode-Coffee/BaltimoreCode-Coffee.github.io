@@ -1,15 +1,17 @@
 /* Ensure the footer is at the bottom without overlapping content */
 
 
+
+
+
+
 footer{
   position: relative;
   bottom: 0;
   width: 100%;
-  background-color: #200735; 
+  background-color: #30123B;
   margin-top: 50px;
   z-index: 1000;
-
-  
 }
 
 .top-half {
@@ -17,6 +19,7 @@ footer{
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  margin-top: 15px;
   height: 170px;
   padding-left: 155px;
   padding-right: 150px;
@@ -28,9 +31,8 @@ footer{
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  border-top:  1px inset rgba(233, 236, 239, 0.5) ;
-
-  height: 70px;
+  border-top:  1px inset #e9ecef;
+  height: 50px;
   padding-left: 155px;
   padding-right: 150px;
 }
@@ -45,13 +47,13 @@ footer{
 } 
 
 #envelope {
-color:  rgb(188, 188, 188);
+color: purple
 }
 
 
 
 .email a{
-    color:    rgb(188, 188, 188);;
+    color: white;
     font-size: 20px;
     margin-top: 25px;
  
@@ -83,8 +85,8 @@ color:  rgb(188, 188, 188);
   width: 30px; /* Set the width of the button */
   height: 30px; /* Set the height of the button */
   border-radius: 50%; /* Make the button rounded */
-  background-color: white; /* Set the background color */
-  color: white; /* Set the icon color */
+  background-color: #6922ac; /* Set the background color */
+  color: gray; /* Set the icon color */
   text-decoration: none; /* Remove underline from links */
   transition: background-color 0.3s; /* Add transition for hover effect */
 }
@@ -95,7 +97,7 @@ color:  rgb(188, 188, 188);
 }
 
 .social-icon {
-  font-size: 24px; /* Set the icon size */
+  font-size: 17px; /* Set the icon size */
 }
 
 .footer-links {
@@ -108,7 +110,7 @@ color:  rgb(188, 188, 188);
 
 /* Target the button id of events and all othe nav links */
 .footer-links li, .footer-events, #footerEventsButton {
-  color: rgb(188, 188, 188);
+  color: gray;
   outline: none;
   margin: 0 30px;
   font-family: "DM Sans", Helvetica, sans-serif;
@@ -133,7 +135,7 @@ color:  rgb(188, 188, 188);
 
 
 .footer-links a {
-  color: rgb(188, 188, 188);
+  color: grey;
   text-decoration: none;
   outline: none;
  
@@ -385,6 +387,113 @@ footer .dropdown-menu{
     font-size: 25px; /* Set the icon size */
   }
  
+  .copyright {
+   
+    color: grey;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 20px;
+    margin-bottom: 10px;
+   
+  }
+  .mini-footer-menu li {
+    color: grey;
+    padding: 4px;
+    font-family: "DM Sans", Helvetica, sans-serif;
+   
+
+  }
+  .mini-footer-menu ul {
+    display: grid;
+        grid-template-columns:  repeat(2, 1fr);
+        column-gap:40px;
+        
+  }
+
+}
+
+/*small to medium mobile styling*/
+@media (min-width: 300px) and (max-width: 500px) {
+  #footer-logo {
+    display: flex;
+    align-items: center;
+  
+    margin-top: 50px;
+    margin-bottom: 1px;
+  } 
+  .mini-footer {
+    display: block;
+  }
+
+  .full-footer {
+    display: none;
+  } 
+
+  .mini-footer-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .mini-footer-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  } 
+
+  .mini-footer-menu li {
+    margin: 10px 10px;
+  }
+
+  .mini-footer-menu a {
+    color: rgb(188, 188, 188);
+    text-decoration: none;
+    outline: none;
+    font-size: 20px;
+
+  
+  }
+
+  .social-list {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+
+  .social-list ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social-list li {
+    margin: 0 20px; /* Add horizontal spacing between items */
+  }
+  .social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px; /* Set the width of the button */
+    height: 35px; /* Set the height of the button */
+    border-radius: 50%; /* Make the button rounded */
+    background-color: white; /* Set the background color */
+    color: white; /* Set the icon color */
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s; /* Add transition for hover effect */
+  }
+  
+  .social-icon {
+    font-size: 25px; /* Set the icon size */
+  }
+
   .copyright {
    
     color: grey;

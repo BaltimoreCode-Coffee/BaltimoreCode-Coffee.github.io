@@ -7,6 +7,7 @@ import EventTypes from "./components/EventTypes/EventTypes";
 import EventCalPage from "./components/EventCal/EventCalPage";
 import AboutUsPage from "./components/AboutUsPage/AboutPage";
 import Blog from "./components/Blog/Blog";
+import BlogArticle from "./components/BlogArticle/BlogArticle";
 import Footer from "./components/Footer/Footer";
 import GetInvolved from "./components/GetInvolved/GetInvolved";
 import ScrollToTop from './ScrollToTop';
@@ -18,6 +19,9 @@ function App() {
       <Navbar />
       <div class="bg-fixed"></div>
       <div className="content">
+
+  
+
         <Routes >
           <Route path="/" element={<HomeView />} />
           <Route path="/event-types" element={<EventTypes />} />
@@ -29,6 +33,7 @@ function App() {
         </Routes>
       </div>
       <Footer /> 
+
     </Router>
     </div>
 
