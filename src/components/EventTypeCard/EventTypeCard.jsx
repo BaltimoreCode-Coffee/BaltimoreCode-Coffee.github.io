@@ -8,7 +8,7 @@ const EventTypeCard = ({eventType}) => {
     // Determine screen size
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.matchMedia('(max-width: 768px)').matches)
+            setIsMobile(window.matchMedia('(max-width: 990px)').matches)
         }
 
         handleResize() // Initial check for window size

@@ -7,7 +7,7 @@ import demoDay from '../../assets/carouselImages/demo_day.jpg'
 const EventTypeData = [
     {
         name: "Lightning Talks",
-        description: "In our lighting talks, speakers present for 10 minutes on a topic of interest ranging from innovation, software, education, design, art, & architecture etc — with the underlying theme of technology.\n\nAt the end of each talk, the floor is open for you to ask questions and have a dialogue with the speakers as well as with the crowd. The talks form a fast-paced and energetic scene, where you can laugh, learn, and leave inspired.",        
+        description: "In our lightning talks, speakers present for 10 minutes on topics ranging from innovation, software, design, and more.\n\nAt the end of each talk, the floor is open for you to ask questions and have a dialogue with the speakers. The talks form a fast-paced and energetic scene, where you can laugh, learn, and leave inspired.",        
         img: lightningTalk,
         btnTxt: 'Sign Up',
         link: 'https://forms.gle/Lb3NfQLqhfxbv2oX7 ',
@@ -16,7 +16,7 @@ const EventTypeData = [
     },
     {
         name: "Symposiums",
-        description: "Our symposium panel is a conversation among four experts from various fields and backgrounds around a central topic. The panel is split into two groups, one in favor of the topic of interest, the other against . To start the discussion, each panelist will give a 3 minute max opener making a case for the opposing side. After this we have 2 30-40 minute rounds of discussion, with a 15 minute intermission & time for questions during the second round.",
+        description: "Our symposium panel is a conversation among four experts from various backgrounds around a central topic. The panel is split into two groups, one in favor of a premise, the other against it. The panel debates for two 30-40 minute rounds, with a 15 minute intermission and time for questions in the second round.",
         img: symposium,
         btnTxt: 'Sign Up',
         link: 'https://forms.gle/hTqzESszwoJZuodq5',
@@ -25,7 +25,7 @@ const EventTypeData = [
     },
     {
         name: "Regular Meetings",
-        description: "Welcome to the stomping ground of coders across the city! Beginners, professionals, students, hobbyists— All are welcome. Bring your work, project, questions, or just bring you. Enjoy the  fresh coffee and donuts and flowing conversation.",
+        description: "Welcome to the stomping ground of coders across the city! Beginners, professionals, students, hobbyists— all are welcome. Bring your work, project, questions, or just bring you. Enjoy the donuts, fresh coffee, and flowing conversation.",
         img: regularMeeting,
         btnTxt: 'View Events',
         link: '/event-calendar',
@@ -34,7 +34,7 @@ const EventTypeData = [
     },
     {
         name: "Workshops",
-        description: "Our workshops are a fun,  hands on, introduction to various topics in CS and adjacent fields. Typically participants just need two prerequisites: A laptop and enthusiasm! We’ve had workshops ranging from the use of GIT in open source and communication skills for developers.",
+        description: "Our workshops are a fun, hands on, introduction to various topics in CS and adjacent fields. Typically participants just need two prerequisites: A laptop and enthusiasm! We’ve had workshops ranging from using GIT in open source to communication skills for developers.",
         img: workshop,
         btnTxt: 'Sign Up',
         link: 'https://forms.gle/PRV7fgARQ3wXxzHDA ',

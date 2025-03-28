@@ -4,40 +4,49 @@
     display: flex;
     flex-direction: column;
    color: white;
-    margin-top: 30px;
-    padding: 0 72px;
+   
+   padding: 0 40px;
+   margin-top: 40px;
+  
     
 }
 
 .about-us-top p {
-    font-family: var(--primary-font);
+    font-family: var(--secondary-font);
     color: var(--primary-white);
     display: flex;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     margin-bottom: 50px;
-    max-width: 60%;
-    margin-top: 20px;
+  
+    margin-top: 10px;
 }
-.about-us-top .more-info{
-    font-size: 20px;
-}
+
 .about-us-top .about-us-h1 {
     text-align: left;
-    font-size: var(--);
+    font-size: var(--heading-desktop);
 }
 
 
 .about-us-top {
-    
-    margin-bottom: 20px;
+
     font-size: 22px;
     text-align: left;
     border-bottom: 1px solid;
     border-color: rgba(255, 255, 255, 0.15);
-    min-width: 100%;
+    width: 100%;
     margin-bottom: 50px;
+    
+
+}
+
+.about-us-top h1 {
+    padding-left: 5%;
+}
+
+.about-us-top p{
+    padding-left: 5%;
 }
 
 .contributor-title {
@@ -63,10 +72,7 @@
     width: 100%;
     display: flex;
     align-items: center; 
-    
-   
-
-   
+      
 }
 
 .row-1 {
@@ -123,8 +129,8 @@ becuase there appears to be differnet defualt spacing on them */
  
 /* Ensure the images are consistent */
 .gallery-item1 img, .gallery-item2 img {
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -158,10 +164,6 @@ vertical-align: middle
     }
 
 
-    .gallery-item1 img, .gallery-item2 img {
-        width: 180px;
-        height: 180px;
-    }
 
 
     .row-1  {
@@ -184,6 +186,20 @@ vertical-align: middle
 
 
 
+@media (max-width: 770px) {
+    .about-us-top .about-us-h1 {
+   
+        font-size: var(--heading-mobile);
+        align-items: center;
+    }
+    .gallery-item1 img, .gallery-item2 img {
+        width: 230px;
+        height: 230px;
+    }
+    
+
+}
+
 /* Mobile View */
 @media (max-width: 670px) {
     .about-us {
@@ -194,13 +210,6 @@ vertical-align: middle
         grid-template-columns: none; /* Maximum of 3 items per row */
     
     }
-
-
-    .gallery-item1 img, .gallery-item2 img {
-        width: 180px;
-        height: 180px;
-    }
-
 
     .row-1  {
         display: flex; 
@@ -220,8 +229,9 @@ vertical-align: middle
 
 }
 
+
 /* Small Mobile View */
-@media (max-width: 440px) {
+@media (max-width: 515px) {
     .about-us {
         padding: 0 20px;
     }
@@ -232,10 +242,7 @@ vertical-align: middle
     }
 
 
-    .gallery-item1 img, .gallery-item2 img {
-        width: 180px;
-        height: 180px;
-    }
+
 
 
     .row-1  {

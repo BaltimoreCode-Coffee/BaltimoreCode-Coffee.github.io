@@ -5,34 +5,34 @@ import "./AboutPage.css";
 
 export default function AboutPage() {
   const [members, setMembers] = useState([]);
-  const [teamRoles, setTeamRoles] = useState([]);
 
   // Fetching members and team roles from Supabase
-useEffect(() => {
+  useEffect(() => {
     const fetchData = async () => {
       // members
       const { data: memberData, error: memberError } = await supabase
         .from('member')
-        .select('id, first_name, last_name, profile_link, headshot');
+        // Update select to pull from the team_roles table as well
+        .select('id, first_name, last_name, profile_link, headshot, team_roles(role, team_id)');
 
      
 
       // team roles
-      const { data: roleData, error: roleError } = await supabase
-        .from('team_roles')
-        .select('id, role, team_id, member_id');
+      // const { data: roleData, error: roleError } = await supabase
+      //   .from('team_roles')
+      //   .select('id, role, team_id, member_id');
 
-      if (memberError || roleError) {
+      if (memberError) {
         console.error('Error fetching data:', memberError || roleError);
       } else {
-        console.log('Fetched members:', memberData);
-        console.log('Fetched team roles:', roleData);
+        //console.log('Fetched members:', memberData);
+
         
         setMembers(memberData);
-        setTeamRoles(roleData);
+
         
-        console.log('Team 1 members:', getMemberInfo(1));
-        console.log('Team 3 members:', getMemberInfo(3));
+        //console.log('Team 1 members:', getMemberInfo(1));
+        //console.log('Team 3 members:', getMemberInfo(3));
 
       }
     };
@@ -41,29 +41,30 @@ useEffect(() => {
   }, []);
 
   const getMemberInfo = (teamId) => {
-    return members.map(member => {
+    // Filter & map members based on selected teamId
+    return members
+      .filter(member => {
+        // Check if the member has roles for the given teamId
+        return member.team_roles.some(role => role.team_id === teamId)
+      })
+      .map(member => {
         // Find roles that match both the member_id and team_id
-        const memberRoles = teamRoles.filter(role => 
-            role.member_id === member.id && 
-            role.team_id === teamId
-        );
+        const roles = member.team_roles
+          .filter(role => role.team_id === teamId)
+          .map(role => role.role) // Extract the roles
+          .join(', '); // Join the roles with a comma
         
-        if (memberRoles.length === 0) return null;
+    if (roles.length === 0) return null;
 
-        return member ?{
-            id: member.id,
-            name: `${member.first_name} ${member.last_name}`,
-            img: member.headshot,
-            profile: member.profile_link,
-            role: memberRoles.map(role => role.role).join(', ')
-        }: { 
-          fullName: 'Loading...', 
-          profileLink: '#',
-          role: 'Loading...'
-        };
-    }).filter(Boolean);
+    return {
+        id: member.id,
+        name: `${member.first_name} ${member.last_name}`,
+        img: member.headshot,
+        profile: member.profile_link,
+        role: roles || 'No role assigned'
+    };
+  });
 };
-
 
 return (
   <section className="about-us">

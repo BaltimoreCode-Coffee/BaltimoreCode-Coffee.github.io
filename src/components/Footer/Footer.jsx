@@ -8,7 +8,7 @@ import {
   faSlack,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import logo from "../../assets/whitetranslogo.png";
+import logo from "../../assets/whitetranslogo.svg";
 import route_names from "../../data_obj/RouteNames";
 
 
@@ -40,7 +40,7 @@ function Footer() {
               <Link to={route_names.about_us} onClick={scrollToTop}>About Us</Link>
             </li>
             <li>
-              <Link to={route_names.volunteer} onClick={scrollToTop}>Volunteer</Link>
+              <Link to={route_names.get_involved}>Get Involved</Link>
             </li> 
             <li>
               <Link to={route_names.blog} onClick={scrollToTop}>Blog</Link>
@@ -113,10 +113,13 @@ function Footer() {
               <EventsDropdownMenu />
             </li>
             <li>
-              <Link to={route_names.about_us} onClick={scrollToTop}>About Us</Link>
+              <Link to={route_names.about_us}>About Us</Link>
             </li>
             <li>
-              <Link to={route_names.blog} onClick={scrollToTop}>Blog</Link>
+              <Link to={route_names.blog}>Blog</Link>
+            </li>
+            <li>
+              <Link to={route_names.get_involved}>Get Involved</Link>
             </li>
             <li>
               <a
@@ -127,9 +130,7 @@ function Footer() {
                 Sponsor
               </a>
             </li>
-            <li>
-              <Link to={route_names.volunteer}>Volunteer</Link>
-            </li>
+            
           </ul>
         </div>
       </section>

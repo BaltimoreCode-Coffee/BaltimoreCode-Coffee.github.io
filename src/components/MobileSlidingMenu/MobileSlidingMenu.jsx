@@ -17,36 +17,64 @@ function MobileSlidingMenu({ buttonId, menuId, buttonIcon, menuItems }) {
     setIsOpen((prevState) => !prevState);
   };
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [closedByNavItem, setClosedByNavItem] = useState(false);
+
   const handleItemClick = (item) => {
     if (!item.disabled && item.handleClick) {
       item.handleClick();
+      setClosedByNavItem(true);
       setIsOpen(false);
-    }
+    } 
+     
+
   };
-  
 
     // Lock background scroll while allowing menu scroll
     useEffect(() => {
       if (isOpen) {
         // Save current scroll position
+        setScrollPosition(window.scrollY);
         const scrollY = window.scrollY;
         // Add styles to prevent background scroll while maintaining position
         document.body.style.position = 'fixed';
         document.body.style.top = `-${scrollY}px`;
         document.body.style.width = '100%';
+
+        // Reset menu scroll
+        const menuElement = document.querySelector('.side-menu.open');
+        if (menuElement) {
+         menuElement.scrollTop = 0;
+         
+        }
+
       } else {
         // Restore scroll position when menu closes
         const scrollY = document.body.style.top;
         document.body.style.position = '';
         document.body.style.top = '';
         document.body.style.width = '';
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      
+         
+      // Makes sure the slider always opens at last position if not closed by nav item
+         
+      if (!closedByNavItem) {
+        window.scrollTo(0, scrollPosition);
+        console.log('scroll pos!');
+    
+      } else {
+        window.scrollTo(0, 0); // Always scroll to top when closed by nav item
+        setClosedByNavItem(false);
+       
+      }
+        
       }
   
       return () => {
         document.body.style.position = '';
         document.body.style.top = '';
         document.body.style.width = '';
+  
       };
     }, [isOpen]);
 
@@ -56,6 +84,7 @@ function MobileSlidingMenu({ buttonId, menuId, buttonIcon, menuItems }) {
         {isOpen ? (
           <CloseIcon 
             fontSize="large"
+            className="close-icon"
      
           />
         ) : (
@@ -65,6 +94,7 @@ function MobileSlidingMenu({ buttonId, menuId, buttonIcon, menuItems }) {
           />
         )}
       </button>
+      
 
       {/* The sliding menu */}
       <nav id={menuId} className={`side-menu ${isOpen ? 'open' : ''}`}>

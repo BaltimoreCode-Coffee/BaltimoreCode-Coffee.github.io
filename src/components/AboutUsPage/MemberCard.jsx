@@ -29,7 +29,7 @@ export default function MemberCard({
           <div className="member-profile">
           <Link to = {profile} target = '_blank'>
           <a href={profile} target="_blank" rel="noopener noreferrer" className="member-profile">
-                    Profile
+          LinkedIn
                   </a>
             </Link>
             </div>

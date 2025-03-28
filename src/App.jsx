@@ -1,5 +1,5 @@
 // src/App.jsx
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter  as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import HomeView from "./components/HomeView/HomeView";
 import Navbar from "./components/Navbar/Navbar";
@@ -9,13 +9,15 @@ import AboutUsPage from "./components/AboutUsPage/AboutPage";
 import Blog from "./components/Blog/Blog";
 import BlogArticle from "./components/BlogArticle/BlogArticle";
 import Footer from "./components/Footer/Footer";
-import Volunteer from "./components/Volunteer/Volunteer";
-
+import GetInvolved from "./components/GetInvolved/GetInvolved";
+import ScrollToTop from './ScrollToTop';
 function App() {
   return (
     <div id="root">
     <Router>
+    <ScrollToTop />
       <Navbar />
+      <div class="bg-fixed"></div>
       <div className="content">
 
   
@@ -27,8 +29,7 @@ function App() {
           <Route path="/event-calendar" element={<EventCalPage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogArticle />} />
-          <Route path="/volunteer" element={<Volunteer />} />
+          <Route path="/get-involved" element={<GetInvolved />} />
         </Routes>
       </div>
       <Footer /> 

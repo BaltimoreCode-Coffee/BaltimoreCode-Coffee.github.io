@@ -12,6 +12,8 @@
     max-width: 1200px;
     width: 100%;
     box-sizing: border-box;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
   
   .about-us__text, .about-us__img {
@@ -28,20 +30,22 @@
   .about-us__text-header h1 {
     font-size: 1.8rem;
     white-space: nowrap;
-
-        font-weight: 600;
+    font-weight: 600;
     color: #222;
+    font-family: var(--primary-font);
    
      
 
   }
   
   .about-us__text-content p {
-    font-size: 18px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     font-family: var(--secondary-font);
     margin-bottom: 20px;
+    line-height: 1.7;
+
   
   }
   
@@ -57,6 +61,7 @@
     background-color: #8e37df;
     color: #fff;
     border: none;
+    
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -76,6 +81,7 @@
   
   .about-us__btn-txt {
     margin: 0;
+    
   }
   
   .about-us__btn-icon {
@@ -89,10 +95,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   
   }
   
   .about-us__img img {
     width: 100%;
+
     border-radius: 5px;
   }
   
@@ -100,18 +108,52 @@
     display: none;
   }
   
+  @media screen and (min-width: 1030px) {
+    .about-us__container {
+      align-items: flex-start; /* Changed from center to flex-start */
+     
+
+    }
+    .about-us__text {
+     
+      justify-content: flex-start; /* Ensures text content starts from the top */
+    }
+    .about-us__text-header h1 {
+
+      margin-top: 0; /* Removes top margin to align with image */
+      padding-top: 0; /* Ensures no padding at top */
+    }
+    .about-us__img {
+ 
+      align-items: flex-start; /* Changed from center to flex-start */
+      align-self: flex-start; /* Added to ensure image aligns at the top */
+    }
+    
+    .about-us__img img {
+     
+      margin-top: 0; /* Ensures no margin at top of image */
+    }
+    .about-us__text-btn .about-us__btn {
+      margin-top: 55px;
+
+    }
+  }
   /* Responsive Design */
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 830px) {
     .about-us__container {
         flex-direction: column;
         align-items: center;
         border-radius: 10px;
     }
   
-    .about-us__text, .about-us__img {
+    .about-us__text {
         width: 100%;
         flex-basis: 100%;
         padding: 0;
+    }
+    .about-us__img {
+      max-width: 450px;
+  
     }
   
     .about-us__text-header, .about-us__text-content {
@@ -122,13 +164,16 @@
     .about-us__text-header h1 {
         line-height: 1;
         font-weight: 600;
+        
     }
   
     .about-us__text-content p {
-      font-size: 20px;
+      font-size: 23px;
       font-style: normal;
       font-weight: 400;
       margin-top: 20px;
+      line-height: 1.5;
+      
         
     }
   

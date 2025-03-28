@@ -18,8 +18,10 @@
     color: white;
     z-index: 10001 !important;
     padding: 0; /* Remove padding */
-    transition: right 0.4s ease;
+    transition: right 0.5s ease;
+  
   }
+
 
   /* When open, slide it into view */
   .side-menu.open {
@@ -49,7 +51,7 @@
     font-family: var(--primary-font);
     font-weight: 600;
     border-bottom: 3px solid rgba(255, 255, 255, 1);
-    transition: background-color 0.4s ease;
+ 
   }
   
   /* Style for disabled items */
@@ -112,5 +114,19 @@
   -webkit-tap-highlight-color: transparent; /* Removes tap highlight on iOS */
   user-select: none; /* Prevents text/icon selection */
   -webkit-touch-callout: none; /* Prevents callout on long-press */
+
+}
+@media screen and (max-width: 500px){
+  .container  .side-menu {
+  
+    margin-top: 10px;
+    
+  
+  }
+  .side-menu ul {
+
+    margin-top: 20px;
+
+  }
 
 }

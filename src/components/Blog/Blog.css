@@ -1,8 +1,6 @@
 .blog {
     display: flex;
     flex-direction: column;
-  
-
     padding: 40px;
   
     
@@ -19,14 +17,13 @@
     
   }
   
-  .blog-header {
+  .blog-header h1{
      display: flex;
       flex-direction: column;
       align-items: left;
       justify-content: center;
       margin-bottom: 50px;
       padding-left: 5%;
-
       text-align: left;
       font-size: var(--heading-desktop);
       word-wrap: normal;
@@ -39,65 +36,43 @@
     margin-bottom: 20px;
   }
   
-  .blog h4 {
-    font-size: 1.5rem;
-    font-weight: 500;
+  .blog p{
+    font-size: 20px;
+
     margin-bottom: 20px;
     color: white;
+    padding-left: 5%;
+    font-family: var(--secondary-font);
   }
   
   .bottom .blog_section {
     
     font-size: 1.5rem;
-    font-weight: 550;
+
     margin-bottom: 300px;
     margin-top: 50px;
     color: white;
-    padding-left: 5%;
-    font-family: var(--primary-font);
+    
+    font-family: var(--secondary-font);
     line-height: 1;
 
   }
   
+
   
-  
-  @media screen and (max-width: 680px) {
+  @media screen and (max-width: 770px) {
     .blog-header h1{
-      margin-bottom: 40px;
-      width: 70%;
-      text-align: center;
-      width: 75%;
-      height: 130px;
-      border: 2.5px solid #fff;
-      margin-left: 10%;
+    
+      line-height: 1.4;
+      font-size: var(--heading-mobile);
   }
   
   .blog h1 {
-    font-size: 2rem;
     font-weight: 550;
-    height: 100px;
    
-  
   }
   
-  .blog h4 {
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-bottom: 20px;
-    color: white;
-    text-align: center;
-    word-wrap: normal;
-  }
-  .bottom .blog_section {
-    
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 300px;
-    margin-top: 60px;
-    text-align: center;
-  
-  
-  }
+
   }
   
   @media screen and (max-width: 440px) {
@@ -106,7 +81,7 @@
       display: flex;
       flex-direction: column;
  
-      align-items: center;
+  
       padding-left: 1%;
       
       
@@ -117,42 +92,40 @@
       word-wrap: break-word;
       text-align: left;
       width: 80%;
+      border: 2.5px solid #fff;
     
       font-size: 2.2rem;
       font-weight: 600;
       line-height: 50px;
-      padding-left: 5%;
-      
-     
+ 
+      height: 110px;
+    
+      margin-left: 10%;
       
   }
 
   
-  .blog h4 {
-    font-size: 1.5rem;
-    font-weight: 500;
+  .blog-header p {
+    font-size: 20px;
     margin-bottom: 20px;
     color: white;
     word-wrap: break-word;
-    text-align: center;
+    text-align: left;
     word-wrap: normal;
+    margin-left: 5%;
   }
-  
   .blog_section {
+    margin-left: 5%;
     
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 300px;
-    margin-top: 60px;
-    text-align: center;
-  
-  
   }
+
+
   .bottom_border{
     border-bottom:  1px inset #a9a7a74d;
   
-   width: 90%;
-   margin-left: 10%;
+   width: 95%;
+   margin-left: 7%;
+  
   }
   
   

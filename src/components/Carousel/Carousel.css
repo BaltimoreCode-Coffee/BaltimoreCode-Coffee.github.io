@@ -28,7 +28,7 @@ li.splide__slide:hover{
 }
 .slide-label{
     color: var(--primary-white);
-    font-family: var(--tertiary-font);
+    font-family: var(--secondary-font);
     pointer-events: none;
     margin-top:-8px;
 }
@@ -41,15 +41,18 @@ li.splide__slide:hover{
     padding: 0 20px;
     
 }
+
 .slide-buttons a{
     color: #fff;
     background-color: rgba(255,255,255,0.3);
-    font-family: var(--tertiary-font);
+    font-family: var(--secondary-font);
     text-decoration: none;
     cursor: pointer;
     pointer-events: all;
     padding: 4px 16px;
+    font-weight: 500;
 }
+
 .slide-buttons a:hover{
     background-color: rgba(255,255,255,0.5);;
 }
@@ -146,7 +149,7 @@ button.custom.splide__arrow{
         }
     }
 }
-@media (max-width: 708px){
+@media (max-width: 830px){
     .carousel{
         display: none;
     }

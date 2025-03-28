@@ -7,8 +7,8 @@ function MobileSponsorCard({content}) {
         <div className="mobile-sponsor-card" id={content.id}>
             <img src={content.image_url} className="mobile-sponsor-card__logo" />
             <h3>{content.name}</h3>
-            <p>{content.description}</p>
-            <p className="mobile-sponsor-card__type">{content.type}</p>
+            <p className='description'>{content.description}</p>
+            <div className="mobile-sponsor-card__type">{content.type}</div>
         </div>
         </Link>
      )

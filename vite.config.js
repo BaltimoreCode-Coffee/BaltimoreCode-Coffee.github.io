@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     outDir: 'build',
     base: '/BaltimoreCode-Coffee.github.io/',
-    // Other build configuration options...
+    // Other build configuration options.
   },
   
 });

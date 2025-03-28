@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --repo https://github.com/BaltimoreCode-Coffee/BaltimoreCode-Coffee.github.io.git",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "clean": "rm -rf dist"
   },

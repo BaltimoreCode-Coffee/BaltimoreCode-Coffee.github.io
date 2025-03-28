@@ -5,11 +5,12 @@ const Options = {
     gap: 25, 
     fixedWidth: '70%',
     pagination: false,
-    drag: true,
+    drag: 'free',
     clickable: false,
     perPage: 1,
     focus: 'center',
-    flickPower: 3
+    flickPower: 500, //See if this reduces the friction when swiping on mobile
+    snap:true
 }
 
 export default Options

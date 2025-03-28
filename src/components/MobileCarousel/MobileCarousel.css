@@ -9,9 +9,27 @@
     background: rgba(184, 184, 184, 0.16);
     border-radius: 10px;
 
+
+
 }
 .mobile-carousel .splide__track {
     height: auto;
    
   
+}
+
+
+@media screen and (min-width:610px){
+    .mobile-carousel .splide__slide{
+       
+        max-width: 60%;
+      
+    }
+    .mobile-carousel{
+        margin: 40px -40px;
+        width: 100vw;
+        
+    }
+    
+    
 }

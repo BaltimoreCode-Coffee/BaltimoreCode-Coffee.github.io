@@ -1,8 +1,8 @@
-import "./Volunteer.css";
+import "./GetInvolved.css";
 import collage from "../../assets/volunteer_collage.png";
 import { Link } from "react-router-dom";
 
-export default function Volunteer() {
+export default function GetInvolved() {
   return (
     <section className="volunteer">
       <div className="volunteer_header">
@@ -17,11 +17,12 @@ export default function Volunteer() {
           
           
           <div className="volunteer_bottom">
-            <p>If you're passionate about coding and looking to increase your involvement in the
-              tech community, becoming a volunteer at Code & Coffee might be for you.
+            <p>We're a completely volunteer led organization, volunteers plan and run events, curate speaker pipelines, and secure venues.
+              If you're passionate about tech and looking to increase your involvement in the
+              community, becoming a volunteer at Code & Coffee might be for you.
               <br /> <br /> 
               As a volunteer, you'll have the opportunity to turn your technical skills into leadership skills, and
-              contribute to maintaining a vibrant tech ecosystem. Join us today and be a part of
+              play a part in building Baltimore's vibrant tech ecosystem. Join us today and be a part of
               something meaningful!
             </p>
           </div>

@@ -1,5 +1,5 @@
 import EventsDropdownMenu from "../EventsDropdownMenu/EventsDropdownMenu";
-import logo from "../../assets/bcc-nav.png";
+import logo from "../../assets/bcc-nav.svg";
 import HamburgerMenuIcon from "@mui/icons-material/Menu";
 import EventCalIcon from "../../assets/event_cal_icon.svg";
 import EventTypeIcon from "../../assets/event_type_icon.svg";
@@ -14,7 +14,7 @@ function Navbar() {
   const navigate = useNavigate();
 
   function toggleMenuDisplay() {
-    if (window.innerWidth < 740) {
+    if (window.innerWidth <= 830) {
       setIsMobileMenuOpen(true);
     } else {
       setIsMobileMenuOpen(false);
@@ -51,6 +51,11 @@ function Navbar() {
             </Link>
           </li>
           <li className="navbar__desktop-menu-item">
+            <Link className="navbar__link" to={route_names.get_involved}>
+            Get Involved
+            </Link>
+          </li>
+          <li className="navbar__desktop-menu-item">
             <Link
               className="navbar__link"
               to="https://hcb.hackclub.com/donations/start/baltimore-code-and-coffee"
@@ -59,11 +64,7 @@ function Navbar() {
               Sponsor
             </Link>
           </li>
-          <li className="navbar__desktop-menu-item">
-            <Link className="navbar__link" to={route_names.volunteer}>
-              Volunteer
-            </Link>
-          </li>
+         
         </ul>
       )}
       {isMobileMenuOpen && (
@@ -109,6 +110,13 @@ function Navbar() {
               },
             },
             {
+              name: "Get Involved",
+              id: "mobileVolunteerBtn",
+              handleClick: () => {
+                navigate(route_names.get_involved);
+              },
+            },
+            {
               name: "Sponsor",
               id: "mobileSponsorBtn",
               handleClick: () => {
@@ -117,13 +125,7 @@ function Navbar() {
                 );
               },
             },
-            {
-              name: "Volunteer",
-              id: "mobileVolunteerBtn",
-              handleClick: () => {
-                navigate(route_names.volunteer);
-              },
-            },
+           
           ]}
         ></MobileSlidingMenu>
       )}

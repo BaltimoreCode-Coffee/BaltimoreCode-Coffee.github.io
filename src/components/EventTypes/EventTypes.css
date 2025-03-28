@@ -16,5 +16,7 @@
 @media (max-width: 770px) {
     .event-types__header h1{
         font-size: var(--heading-mobile);
+       line-height: 1.4;
+       width: 97%;
     }
 }
