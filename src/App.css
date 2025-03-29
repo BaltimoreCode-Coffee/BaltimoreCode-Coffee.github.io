@@ -86,8 +86,13 @@ h2 {
 
 .content{
   flex: 1 1 auto;
+  max-width: 1300px;
+  margin: 0 auto;
 }
-
+.carousel-section{
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
 
 /*As margin for fixed nav-bar*/
 @media screen and (max-width: 500px) {

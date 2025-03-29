@@ -12,26 +12,25 @@ import GetInvolved from "./components/GetInvolved/GetInvolved";
 import ScrollToTop from './ScrollToTop';
 function App() {
   return (
-    <div id="root">
-    <Router>
-    <ScrollToTop />
-      <Navbar />
-      <div class="bg-fixed"></div>
-      <div className="content">
-        <Routes >
-          <Route path="/" element={<HomeView />} />
-          <Route path="/event-types" element={<EventTypes />} />
-          <Route path="/event-types/:tag?" element={<EventTypes />} />
-          <Route path="/event-calendar" element={<EventCalPage />} />
-          <Route path="/about-us" element={<AboutUsPage />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/get-involved" element={<GetInvolved />} />
-        </Routes>
-      </div>
-      <Footer /> 
-    </Router>
-    </div>
-
+    <>
+      <Router>
+      <ScrollToTop />
+        <Navbar />
+        <div className="bg-fixed"></div>
+        <div className="content">
+          <Routes >
+            <Route path="/" element={<HomeView />} />
+            <Route path="/event-types" element={<EventTypes />} />
+            <Route path="/event-types/:tag?" element={<EventTypes />} />
+            <Route path="/event-calendar" element={<EventCalPage />} />
+            <Route path="/about-us" element={<AboutUsPage />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/get-involved" element={<GetInvolved />} />
+          </Routes>
+        </div>
+        <Footer /> 
+      </Router>
+    </>
   );
 }
 

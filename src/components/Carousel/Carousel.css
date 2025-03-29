@@ -1,5 +1,6 @@
 .carousel {
-    margin: 86px -30px 100px;
+    /* margin: 86px -30px 100px; */
+    margin: 86px 0 100px;
 }
 li.splide__slide:hover{
     background: linear-gradient( rgba(255, 255, 255, 0), rgba(78, 0, 110, .9));

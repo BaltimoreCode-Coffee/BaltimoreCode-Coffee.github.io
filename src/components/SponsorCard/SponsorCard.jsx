@@ -14,7 +14,7 @@ function SponsorCard({sponsor}) {
                 <p>{sponsor.description}</p>
             </div>
             <div className="sponsor-card__type">
-                <p>{sponsor.type}</p>
+                {sponsor.type}
             </div>
             </Link>
         </div>
